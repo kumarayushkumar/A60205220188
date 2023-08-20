@@ -10,7 +10,7 @@ function TrainDetails() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await fetchSingleTrain(trainNumber);
+        const data = await fetchSingleTrain(trainNumber as string);
         setTrain(data);
       } catch (error) {
         console.error("Error fetching train details:", error);
