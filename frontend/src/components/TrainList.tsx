@@ -1,4 +1,3 @@
-// src/components/TrainList.tsx
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { fetchAllTrains, Train } from "../api";
@@ -34,9 +33,6 @@ function TrainList() {
                   Delay: {train.delayedBy} minutes
                 </span></div>
               </div>
-
-
-
             </li>
           ))}
         </ul>

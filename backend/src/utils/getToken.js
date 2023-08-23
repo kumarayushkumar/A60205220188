@@ -15,7 +15,6 @@ const getClientToken = async (clientSecret) => {
     const accessToken = response.data.access_token;
     return accessToken;
   } catch (error) {
-    // console.error('Error:', error.message);
     throw error;
   }
 };

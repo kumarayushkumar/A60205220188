@@ -2,12 +2,9 @@ import axios from 'axios';
 
 const allTrain = async (req, res) => {
   try {
-    const response = await axios.get('http://20.244.56.144/train/trains', {
-      headers: req.headers,
-    });
-
-    const currentTime = new Date(); // Get the current time
-
+    const response = await axios.get('http://20.244.56.144/train/trains', { headers: req.headers })
+    const currentTime = new Date();
+    
     const trainDataArray = response.data.filter(train => {
       const departureTime = new Date();
       departureTime.setHours(train.departureTime.Hours);
@@ -16,7 +13,7 @@ const allTrain = async (req, res) => {
 
       const timeDifferenceInMinutes = (departureTime - currentTime) / (1000 * 60);
 
-      return timeDifferenceInMinutes >= 30; // Include trains with departure time >= 30 minutes
+      return timeDifferenceInMinutes >= 30;
     });
 
     console.log(trainDataArray);

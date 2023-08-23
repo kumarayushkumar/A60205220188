@@ -1,4 +1,3 @@
-// src/components/TrainDetails.tsx
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchSingleTrain, Train } from "../api";

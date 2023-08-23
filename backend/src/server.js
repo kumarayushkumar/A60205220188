@@ -16,13 +16,11 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'X-Requested-With', 'Accept']
 }))
 
-
 app.get('/', (req, res) => {
   res.send('Train Api');
 });
 
 app.use('/trains', trainRoute);
-
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
