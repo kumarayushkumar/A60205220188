@@ -1,2 +1,6 @@
-# A60205220188
+# Train Status 
+
+using React + Typescript in frontend and Nodejs in backend
+
+
 
